@@ -17,11 +17,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 							class="project-title-pre-icon"
 							data-icon="stars"
 						>
-							{" "}
-							<>
 								<symbol id="ai:local:stars">
 									<g fill="none">
-										<>
 											<g clip-path="url(#a)">
 												<path
 													fill="currentColor"
@@ -33,12 +30,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 													<path fill="#fff" d="M0 .5h24v24H0z" />
 												</clipPath>
 											</defs>
-										</>
+
 									</g>
 								</symbol>
 								<use xlink:href="#ai:local:stars" />
-							</>{" "}
-						</svg>{" "}
+
+						</svg>
 						{item.title}
 					</h3>
 					{item.title_en && <p class="font-type">{item.title_en}</p>}
