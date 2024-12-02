@@ -31,7 +31,7 @@ interface SeoTdk {
 }
 // SEO TDK 首页
 export const homeTdk: SeoTdk = {
-	title: '这里是设计师陈熙的个人网站',
+	title: '这里是主页的标题',
 	description: '这是我的设计师陈熙部分项目展示',
 	keywords: '陈熙,博客'
 }
@@ -113,14 +113,14 @@ export const socialLinks = [
 ];
 
 // Page Tag 页面头部的标签 Tag
-interface PageTag {
-	index: string
-	about: string
-	blog: string
-	project: string
+interface PageTag {			// 定义一个 TypeScript 接口 `PageTag`，用于描述页面标签的结构
+	index: string			// 首页标签
+	about: string			// 关于页面标签
+	blog: string			// 博客页面标签
+	project: string			// 项目页面标签
 }
 export const pageTag: PageTag = {
-	index: 'PORTFOLIO',
+	index: 'PORTFOLIO',		
 	about: 'ABOUT',
 	blog: 'BLOG',
 	project: 'PROJECT'
@@ -128,11 +128,11 @@ export const pageTag: PageTag = {
 
 
 //Page Description 页面大标题下的说明文字
-interface PageDescription {
-	index?: string
-	project?: string
-	blog?: string
-	about?: string
+interface PageDescription {		// 定义一个 TypeScript 接口 `PageDescription`，用于描述页面
+	index?: string				// 首页的描述（可选）
+	project?: string			// 项目页面的描述（可选）
+	blog?: string				// 博客页面的描述（可选）
+	about?: string				// 关于页面的描述（可选）
 }
 export const pageDescription: PageDescription = {
 	index: '我是陈熙，一个拥有超过5年经验的创意设计师和开发人员，在这里可以了解更多关于我的信息，或者阅读我的一些文章和笔记。',
