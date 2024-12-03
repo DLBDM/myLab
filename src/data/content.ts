@@ -4,24 +4,27 @@ interface NavItem {
     target?: string; // target是可选的，默认为_self或不指定
 }
 
+// 定义一个导航接口
 interface Nav {
     avatar?: string;
+	labName?:string;
     items?: NavItem[]; // 使用数组来存储导航项，以便更灵活地添加或删除项
 }
 
-// 定义导航项
+// 定义一个Nav常量，并导出到其他文件（包括实验室图标地址、导航栏标签以及链接、打开方式）
 export const nav: Nav = {
-	avatar:'/assets/author.jpg',
+	avatar:'/assets/LabIcon.jpg',		//实验室图标Icon
+	labName: '计算机科学实验室',
     items: [
-        { label: '首页', href: '/', target: '_self' },// target 为 '_blank' 打开新链接
-        { label: '项目', href: '/project', target: '_self' },
-        { label: '关于', href: '/about', target: '_self' },
-        { label: '博客', href: '/blog', target: '_self' },
+        { label: '首页', href: '/', target: '_self' },
+        { label: '团队', href: '/project', target: '_self' },
+        { label: '风采', href: '/blog', target: '_self' },
+		{ label: '关于', href: '/about', target: '_self' },
     ],
 };
 
-// Footer
-export const footerText = `© ${new Date().getFullYear()} Chenxi. All Rights Reserved.`
+// Footer(页面底部文本)
+export const footerText = `© ${new Date().getFullYear()} 智能驾驶实验室. All Rights Reserved.`
 
 //SEO TDK
 interface SeoTdk {
@@ -32,8 +35,8 @@ interface SeoTdk {
 // SEO TDK 首页
 export const homeTdk: SeoTdk = {
 	title: '这里是主页的标题',
-	description: '这是我的设计师陈熙部分项目展示',
-	keywords: '陈熙,博客'
+	description: '这里是主页的描述',
+	keywords: '关键字1,关键字2'
 }
 // SEO TDK 博客
 export const blogTdk: SeoTdk = {
@@ -135,7 +138,7 @@ interface PageDescription {		// 定义一个 TypeScript 接口 `PageDescription`
 	about?: string				// 关于页面的描述（可选）
 }
 export const pageDescription: PageDescription = {
-	index: '我是陈熙，一个拥有超过5年经验的创意设计师和开发人员，在这里可以了解更多关于我的信息，或者阅读我的一些文章和笔记。',
+	index: '人工嵌入物光电子学实验室成立于2015年1月1日，是嵌入物方向的人工嵌入物光电子学实验室；光场调控、成像与传感；微纳尺度量测设备；超快光纤测量系统；信号处理与识别；发射和接收功能。实验室拥有功能丰富的设施，包括但不限于实验室楼层面积超过600平米，主要用于支撑电子测试、实验室测量系统、实验室提供多功能实验室、实验室拥有高级别的研究设施，投资超过2000万元。实验室拥有团队人数13人，学术共享人力资源共同完成科学和技术项目。研究员包括5人，其中8人获得“科学进步人才”，2人获得“广东省科技奖”，1人获得“广东省杰出青年基金”，1人获得“科技进步”奖励。近年来，实验室承担了国家自然科学基金重点项目和国家重点研发计划等多项科研项目，承担关键技术开发和研发',
 	project: "这是我的部分项目展示",
 	about: '专注于产品、品牌、UI设计和视觉开发',
 	blog: '这是我的个人笔记和想法， 希望你能够获得帮助！',

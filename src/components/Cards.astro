@@ -6,25 +6,26 @@ import Filter from '../components/Filter.astro';
 // 使用 JSON 数据
 // import cardData from '../components/card.json';
 import cardData from '../data/home.json';
-const cards = [];
+const cards = [];                                   // 创建一个空数组，存储生成的卡片数据
+// 遍历 cardData 数组的每一项，使用 index 和 item 分别表示项的索引和数据内容
 for (const [index,item] of cardData.entries()) {
-  const card = {
-    id: item.id || index,
-    title: item.title,
-    cover: item.cover || "",
-    description: item.desc || "",
-    url: item.url || "",
-    detail: item.detail || "",
-    category: item.category || "other",
-    tag: item.tag || "",
-    date: item.date || "",
-    mark: item.mark|| "",
-    index: index + 1,
+  const card = {                                    // 构造一个 card 对象，包含多个属性
+    id: item.id || index,                           // id 属性，优先使用 item 中的 id，如果没有则使用索引值
+    title: item.title,                              // title 属性，来自 item 中的 title 字段
+    cover: item.cover || "",                        // cover 属性，优先使用 item 中的 cover，如果没有则使用空字符串
+    description: item.desc || "",                   // description 属性，优先使用 item 中的 desc 字段，如果没有则使用空字符串
+    url: item.url || "",                            // url 属性，优先使用 item 中的 url 字段，如果没有则使用空字符串
+    detail: item.detail || "",                      // detail 属性，优先使用 item 中的 detail 字段，如果没有则使用空字符串
+    category: item.category || "other",             // category 属性，优先使用 item 中的 category 字段，如果没有则默认为 "other"
+    tag: item.tag || "",                            // tag 属性，优先使用 item 中的 tag 字段，如果没有则使用空字符串
+    date: item.date || "",                          // date 属性，优先使用 item 中的 date 字段，如果没有则使用空字符串
+    mark: item.mark|| "",                           // mark 属性，优先使用 item 中的 mark 字段，如果没有则使用空字符串
+    index: index + 1,                               // index 属性，用于记录卡片的顺序，索引加 1 作为卡片的顺序
   };
-  cards.push(card);
+  cards.push(card);                                 // 将生成的 card 对象添加到 cards 数组中
 }
 // const cardFullData= JSON.stringify(cards);
-const count = cards.length;
+const count = cards.length;                         // 卡片数量
 ---
 <Filter count={count} />
 <div class="section card">

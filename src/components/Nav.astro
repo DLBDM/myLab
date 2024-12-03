@@ -8,23 +8,37 @@ import NavMobile from "../components/NavMobile.astro";
 ---
 
 <nav>
+	<!-- 导航栏 -->
 	<div class="container nav-wrapper">
+		<!-- 导航栏头部 -->
 		<div class="menu-header">
+			<!-- 网站标题 -->
 			<div class="site-title">
+				<!-- 定义一个链接指向首页 -->
 				<a href="/" class="author">
+					<!-- 定义实验室Icon容器 -->
 					<figure class="avatar">
+						<!-- 设置实验室Icon图像，图像地址通过{nav.avatar}动态传入，禁止图像被拖拽 -->
 						<img class="avatar__img"
 							src={nav.avatar} alt=""
 							draggable="false">
+						<figcaption class="avatar__name">智能驾驶实验室</figcaption>
 					</figure>
+					<!-- <span class="lab-name">智能驾驶实验室</span> -->
 				</a>
-				<EffectSwitch/>
+				<!-- 效果组件 -->
+				<!-- <EffectSwitch/> -->		
 			</div>
 		</div>
+		<!-- 定义菜单容器 -->
 		<div id="menu-content">
+			<!-- 定义PC端的菜单容器 -->
 			<div class="menu-footer pc-nav">
+				<!-- 创建一个菜单项容器 -->
 				<ul class="nav-items">
+					<!-- 遍历nav常量中的每个导航栏标签项 -->
 					{nav.items?.map(item => (
+						// 定义列表项
 						<li>
 							<a
 							 	aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
@@ -35,23 +49,28 @@ import NavMobile from "../components/NavMobile.astro";
 											(item.href !== '/' && Astro.url.pathname.startsWith(item.href)),
 									},
 								]}
+								// 导航栏标签链接
 								href={item.href}
+								// 导航栏标签打开方式
 								target={item.target || '_self'}
 							>
-								{item.label}
+								{/* 导航栏标签名称 */}
+								{item.label}		
 							</a>
 						</li>
     				))}
 				</ul>
-				<div class="theme-toggle" style="transform:scale(0.75)">
+				<!-- <div class="theme-toggle" style="transform:scale(0.75)">
 					<ThemeToggle />
-				</div>
+				</div> -->
 			</div>
+			<!-- 创建移动端的菜单容器 -->
 			<NavMobile/>
 		</div>
 	</div>
 </nav>
-<Effect/>
+<!-- 光标跟随动画 -->
+<!-- <Effect/> -->
 <script>
 	class MenuButton extends HTMLElement {
 		constructor() {
@@ -99,6 +118,7 @@ import NavMobile from "../components/NavMobile.astro";
 		-webkit-backdrop-filter: saturate(300%) blur(5px);
 		backdrop-filter: saturate(300%) blur(5px);
 		background-color: rgba(var(--color-999-rgb), 0.65);
+		
 	}
 	.bg-ticker{
 		position: absolute;
@@ -132,34 +152,47 @@ import NavMobile from "../components/NavMobile.astro";
 			color:rgb(236, 72, 113);
 		}
 	}
+
+	
 	.logo {
 		max-height: 30px;
 	}
 	.logo path{
 		fill: var(--color-100);
 	}
-    .avatar{
-        display: inline-block;
-        position: relative;
-        line-height: 1;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-	.avatar__img{
-		display: block;
-		border-radius: 50%;
-    }
-	.avatar__name{
-		line-height: normal;
-		font-weight: 400;
-		font-size: 22px;
-    }
+	.avatar {
+    display: flex; /* 使用flexbox布局，使图标和文本水平排列 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 图标和文字之间的间距 */
+    width: auto; /* 容器宽度自适应内容 */
+    height: auto; /* 容器高度自适应内容 */
+}
+
+.avatar__img {
+    display: block;
+    width: 40px; /* 图标的宽度 */
+    height: 40px; /* 图标的高度 */
+    
+}
+
+.avatar__name {
+    font-weight: 400; /* 字体权重 */
+    font-size: 16px; /* 字体大小可以适当调整 */
+    line-height: 1.2; /* 设置文本行高，以控制文本的间距 */
+    white-space: nowrap; /* 防止文字换行 */
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    text-overflow: ellipsis; /* 超出部分显示省略号 */
+	
+}
+
+
+
 	.nav-wrapper{
 		display: flex;
 			align-items: center;
 			justify-content: space-between;
 			gap: 1rem;
+			height: 70px; /* 增加导航栏的高度 */
 	}
 	.nav-items {
 		margin: 0;
@@ -182,11 +215,27 @@ import NavMobile from "../components/NavMobile.astro";
 		display: inline-block;
 		color: var(--color-300);
 		text-decoration: none;
+		
+	}
+	.link:hover {
+        color: #00639b; /* 悬停时的字体颜色变为蓝色 */
+    	text-decoration: underline;
+    	text-decoration-color: #00639b; /* 下划线颜色也变为蓝色 */
+    	text-decoration-thickness: 2px;
+    	text-underline-offset: 7px;
 	}
 
 	.link.active {
 		color: var(--color-100);
 		font-weight: bold;
+	}
+
+	.link.active:hover {
+        color: var(--color-100); /* 悬停时的字体颜色变为蓝色 */
+    	text-decoration: underline;
+    	text-decoration-color: var(--color-100); /* 下划线颜色也变为蓝色 */
+    	text-decoration-thickness: 2px;
+    	text-underline-offset: 7px;
 	}
 
 	.menu-footer {

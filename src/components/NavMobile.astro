@@ -3,15 +3,18 @@ import {nav} from '../data/content';
 ---
 
 <div class="mobile-header">
+  <!-- 创建汉堡 -->
 	<div class="hamburger">
 		<div class="hamburger-toggle">
 				<span></span>
 		</div>
 
 	</div>
+  <!-- 导航栏容器 -->
 	<div class="m-nav">
 		<div class="m-nav-wrap">
 				<ul class="m-menu">
+          <!-- 创建导航项容器 -->
 						{nav.items?.map(item => (
 							<li class="m-menu-li">
 								<a
@@ -23,23 +26,23 @@ import {nav} from '../data/content';
 												(item.href !== '/' && Astro.url.pathname.startsWith(item.href)),
 										},
 									]}
-									href={item.href}
-									target={item.target || '_self'}
+									href={item.href}  // 导航栏标签链接
+									target={item.target || '_self'}   // 导航栏标签打开方式
 								>
+                  {/* 导航栏标签名称 */}
 									{item.label}
 								</a>
 							</li>
 							))}
-							<li class="m-menu-li">
+							<!-- <li class="m-menu-li">
 									<div class="theme-toggle" style="transform:scale(1.1);" >
-	
 									</div>
-							</li>
+							</li> -->
 				</ul>
 		</div>
 
 	</div>
-	<div class="m-nav-mask"></div>
+	<!-- <div class="m-nav-mask"></div> -->
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
