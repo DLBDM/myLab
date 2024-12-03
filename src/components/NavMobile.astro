@@ -26,8 +26,8 @@ import {nav} from '../data/content';
 												(item.href !== '/' && Astro.url.pathname.startsWith(item.href)),
 										},
 									]}
-									href={item.href}  // 导航栏标签链接
-									target={item.target || '_self'}   // 导航栏标签打开方式
+									href={item.href}  
+									target={item.target || '_self'}  
 								>
                   {/* 导航栏标签名称 */}
 									{item.label}
