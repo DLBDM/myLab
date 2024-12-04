@@ -27,7 +27,7 @@ const { title, description,keywords } = Astro.props;	// 解析传递给该组件
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />		<!-- 设置页面图标 -->
 
 
-<!-- 内联 JavaScript 代码，用于根据用户偏好设置主题（暗色模式/亮色模式） -->
+<!-- 内联 JavaScript 代码，用于根据用户偏好设置主题（暗色模式/亮色模式）
 <script is:inline>	
 	// 获取用户的主题偏好												
 	const getThemePreference = () => {
@@ -54,4 +54,4 @@ const { title, description,keywords } = Astro.props;	// 解析传递给该组件
 		// 观察 HTML 元素的类属性变化（第一个参数为要监听的标签html，第二个参数为配置对象，定义要观察的变化类型（attributes: true表示属性变化）和具体细节（attributeFilter: ['class']表示class属性变化））
 		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	}
-</script>
+</script> -->
