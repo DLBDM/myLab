@@ -167,8 +167,7 @@ import myPortrait from "../assets/portrait.jpg";
 	var map; // 定义地图对象
 	var point; // 定义定位点
 	var marker; // 定义标记
-// 	let font = window.getComputedStyle(document.body).fontFamily;
-// console.log(font);
+
 	function initialize() {
 		// 创建地图实例
 		map = new BMap.Map('map');
@@ -182,23 +181,17 @@ import myPortrait from "../assets/portrait.jpg";
 		// 启用滚轮缩放功能
 		// map.enableScrollWheelZoom(false); // 启用地图的滚轮缩放功能
 
-		// 创建自定义蓝色填充标记
-		var redIcon = new BMap.Icon('/assets/location/location.png', new BMap.Size(40, 40)); // 自定义图标
-		marker = new BMap.Marker(point, {icon: redIcon}); // 使用自定义图标创建标记
-		map.addOverlay(marker); // 将标记添加到地图
+		// // 创建自定义蓝色填充标记
+		// var redIcon = new BMap.Icon('/assets/location/location.png', new BMap.Size(40, 40)); // 自定义图标
+		// marker = new BMap.Marker(point, {icon: redIcon}); // 使用自定义图标创建标记
+		// map.addOverlay(marker); // 将标记添加到地图
 
-		// // 为标记添加点击事件
-		// marker.addEventListener('click', function() {
-		// 	// 打开百度地图的网页链接，跳转到当前位置
-		// 	var url = 'https://map.baidu.com/?newmap=1&viewpoint=' + point.lng + ',' + point.lat + '&title=我的位置';
-		// 	window.open(url, '_blank'); // 打开百度地图，_blank 表示在新窗口或标签页中打开
-		// });
 
-		// 添加缩放控件
-		map.addControl(new BMap.NavigationControl()); // 缩放控件（包括放大缩小按钮）
+		// // 添加缩放控件
+		// map.addControl(new BMap.NavigationControl()); // 缩放控件（包括放大缩小按钮）
 
-		// 添加比例尺控件
-		map.addControl(new BMap.ScaleControl()); // 比例尺控件
+		// // 添加比例尺控件
+		// map.addControl(new BMap.ScaleControl()); // 比例尺控件
 	}
 
 	// 加载百度地图API
