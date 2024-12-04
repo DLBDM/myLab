@@ -15,6 +15,10 @@ const { title, description,keywords } = Astro.props;	// 解析传递给该组件
 <link rel="sitemap" href="/sitemap-index.xml" />								<!-- 站点地图的文件路径 -->
 <link rel="alternate" type="application/rss+xml" title={title} href={new URL("rss.xml", Astro.site)} />		<!-- 设置 RSS 提要的链接 -->
 
+
+
+<!-- <script src="http://api.map.baidu.com/api?v=2.0&ak=ZbICriNT4c5zrjP3IzvKq2IJ4g4uYuNZ" type="text/javascript"></script> -->
+
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">					<!-- 设置 IE 浏览器的兼容模式，强制使用 Edge 或 Chrome 内核 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">	<!-- 设置视口配置，确保页面适应移动设备，禁止用户缩放 -->
 <meta name="generator" content={Astro.generator} />								<!-- 设置页面生成器的信息 -->

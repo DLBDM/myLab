@@ -19,12 +19,12 @@ export const nav: Nav = {
         { label: '首页', href: '/', target: '_self' },
         { label: '团队', href: '/project', target: '_self' },
         { label: '风采', href: '/blog', target: '_self' },
-		{ label: '关于', href: '/about', target: '_self' },
+		{ label: '联系', href: '/about', target: '_self' },
     ],
 };
 
 // Footer(页面底部文本)
-export const footerText = `© ${new Date().getFullYear()} 智能驾驶实验室. All Rights Reserved.`
+export const footerText = `© ${new Date().getFullYear()} 嵌入式与工业互联实验室. All Rights Reserved.`
 
 //SEO TDK
 interface SeoTdk {
@@ -34,33 +34,33 @@ interface SeoTdk {
 }
 // SEO TDK 首页
 export const homeTdk: SeoTdk = {
-	title: '这里是主页的标题',
-	description: '这里是主页的描述',
-	keywords: '关键字1,关键字2'
+	title: '嵌入式与工业互联实验室',
+	description: '嵌入式与工业互联实验室',
+	keywords: '嵌入式与工业互联实验室'
 }
 // SEO TDK 博客
 export const blogTdk: SeoTdk = {
-	title: '陈熙的博客',
-	description: '记录我的一些想法和笔记',
-	keywords: '陈熙,博客,blog'
+	title: '嵌入式与工业互联实验室',
+	description: '嵌入式与工业互联实验室',
+	keywords: '嵌入式与工业互联实验室'
 }
 // SEO TDK 关于
 export const aboutTdk: SeoTdk = {
-	title: '设计师陈熙的个人介绍',
-	description: '设计师陈熙的个人介绍',
-	keywords: '陈熙,博客'
+	title: '嵌入式与工业互联实验室',
+	description: '嵌入式与工业互联实验室',
+	keywords: '嵌入式与工业互联实验室'
 }
 // SEO TDK  项目
 export const projectTdk: SeoTdk = {
-	title: '陈熙的项目介绍',
-	description: '这是我的部分项目展示',
-	keywords: '陈熙,博客,project'
+	title: '嵌入式与工业互联实验室',
+	description: '嵌入式与工业互联实验室',
+	keywords: '嵌入式与工业互联实验室'
 }
 // SEO TDK 404
 export const notFoundTdk: SeoTdk = {
-	title: '404 Not Found - 这里什么都没有。',
-	description: '404 Not Found - 这里什么都没有。',
-	keywords: '404 Not Found. 这里什么都没有。'
+	title: '404 Not Found - 嵌入式与工业互联实验室。',
+	description: '404 Not Found - 嵌入式与工业互联实验室。',
+	keywords: '404 Not Found. 嵌入式与工业互联实验室。'
 }
 
 // 社交平台 name：名称  url: 链接 icon：svg图标
@@ -123,7 +123,7 @@ interface PageTag {			// 定义一个 TypeScript 接口 `PageTag`，用于描述
 	project: string			// 项目页面标签
 }
 export const pageTag: PageTag = {
-	index: 'PORTFOLIO',		
+	index: '团队概况',		
 	about: 'ABOUT',
 	blog: 'BLOG',
 	project: 'PROJECT'
@@ -152,13 +152,11 @@ export interface FilterItem {
 	dataGroup: string
 }
 export const filterItems: FilterItem[] = [
-	{ content: "网页", dataGroup: "web" },
-	{ content: "UI", dataGroup: "ui" },
-	{ content: "三维", dataGroup: "3d" },
-	{ content: "摄影", dataGroup: "photography" },
-	{ content: "插画", dataGroup: "illustration" },
-	{ content: "品牌", dataGroup: "brand" },
-	{ content: "其他", dataGroup: "other" }
+	{ content: "学术交流", dataGroup: "Conference" },
+	{ content: "研究方向", dataGroup: "Focus" },
+	{ content: "工业产物", dataGroup: "Product" },
+	{ content: "专利技术", dataGroup: "Patent" },
+	{ content: "荣誉奖励", dataGroup: "Award" },
 ];
 
 

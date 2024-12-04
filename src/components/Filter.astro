@@ -2,12 +2,22 @@
 import { filterItems } from '../data/content.ts';
 const {count} = Astro.props;                            // 卡片数量
 ---
+<!-- <div class="title-tag">
+    <span>团队成果</span>
+</div> -->
+
+<div class="contact-container">
+    <h2 class="contact-title">团队成果</h2>
+    <hr class="contact-line">
+    <h3 class="contact-subtitle">OUTPUTS</h3>
+  </div>
+
 <div class="section filter ">
 	<div class="border-bottom">
 		<div class="row filter-wrapper relative overflow-hidden col-1a">
 			<ul class="flex filter-list filter-options">
-				<button class="filter-item filter-tag active" class="" data-group="all">
-					全部 <span>({count})</span>
+				<button class="filter-item filter-tag active" class="" data-group="Research">
+					科研动态 
 				</button>
                 {filterItems.map((item) => (
                     <button  class="filter-item filter-tag" data-group={item.dataGroup}>
@@ -21,6 +31,56 @@ const {count} = Astro.props;                            // 卡片数量
 
 
 <style lang="scss">
+.title-tag {
+    display: inline-block;
+    line-height: 1;
+    margin: 16px auto 0;
+    padding: 8px 22px 4px;
+    text-align: center; /* 使标题文本居中 */
+    width: 100%; /* 确保容器宽度为100% */
+    margin-bottom: 20px;
+}
+
+// .title-tag span {
+//     font-size: 26px;
+//     margin-bottom: 20px;
+//     margin-top: 60px;
+//     color: #00639b;
+// }
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;  /* 容器的高度，可以根据需要调整 */
+    text-align: center;  /* 文字居中对齐 */
+	margin-top:70px;
+	padding-bottom: 0px;
+  }
+
+  .contact-title {
+    font-size: 34px;  /* "团队概况" 字体大小 */
+    margin: 0;  /* 去除默认 margin */
+	color: rgba(0, 99, 155, 1);
+	letter-spacing: 5px;
+  }
+
+  .contact-line {
+    width: 11.4%;  /* 横线的宽度 */
+    border: none;
+    border-top: 2px solid rgba(0, 99, 155, 1);  /* 设置横线的颜色和粗细 */
+    margin: 10px 0;  /* 横线上下的间距 */
+	margin-top:18px;
+	margin-bottom:18px;
+  }
+
+  .contact-subtitle {
+    font-size: 18px;  /* "ABOUT US" 字体大小 */
+    margin: 0;  /* 去除默认 margin */
+	color: rgba(0, 0, 0, 0.3);
+  }
+
 :root{
     --filter-bg:  #fff;
     --filter-bg-active:#0a0a0a;
@@ -105,7 +165,7 @@ const {count} = Astro.props;                            // 卡片数量
     }
     &-list{
         display:flex;
-        gap: 12px;
+        gap: 40px;
         flex-wrap: wrap;
         justify-content: center;
         margin: auto;
