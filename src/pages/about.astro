@@ -181,17 +181,17 @@ import myPortrait from "../assets/portrait.jpg";
 		// 启用滚轮缩放功能
 		// map.enableScrollWheelZoom(false); // 启用地图的滚轮缩放功能
 
-		// // 创建自定义蓝色填充标记
-		// var redIcon = new BMap.Icon('/assets/location/location.png', new BMap.Size(40, 40)); // 自定义图标
-		// marker = new BMap.Marker(point, {icon: redIcon}); // 使用自定义图标创建标记
-		// map.addOverlay(marker); // 将标记添加到地图
+		// 创建自定义蓝色填充标记
+		var redIcon = new BMap.Icon('/assets/location/location.png', new BMap.Size(40, 40)); // 自定义图标
+		marker = new BMap.Marker(point, {icon: redIcon}); // 使用自定义图标创建标记
+		map.addOverlay(marker); // 将标记添加到地图
 
 
-		// // 添加缩放控件
-		// map.addControl(new BMap.NavigationControl()); // 缩放控件（包括放大缩小按钮）
+		// 添加缩放控件
+		map.addControl(new BMap.NavigationControl()); // 缩放控件（包括放大缩小按钮）
 
-		// // 添加比例尺控件
-		// map.addControl(new BMap.ScaleControl()); // 比例尺控件
+		// 添加比例尺控件
+		map.addControl(new BMap.ScaleControl()); // 比例尺控件
 	}
 
 	// 加载百度地图API
