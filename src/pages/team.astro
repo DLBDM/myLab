@@ -47,8 +47,9 @@ const doctorTeam = team.filter(member => member.type === 'doctor');
                     </div>
                     <div class="title">研究员、博士生导师</div>
                     <div class="details">尹震宇，研究员，深圳市海外高层次人才，香港中文大学07级物理哲学博士，2012~0016年密苏里科技大学访问学者。2016年9月入职深圳大学。兼任美国物理学会（APS）审稿人，美国光学学会（OSA）审稿人。主要研究方向包括电磁波与功能性材料相互作用的理论计算和数值分析实验，以及等效介质理论的第一性原理的研究。</div>
-                    
-                    <button class="button">查看更多</button>
+                    <a href="/blog/chinese-article-template">
+                        <button class="button">查看更多</button>
+                    </a>
                 </div>
             </div>
 
@@ -280,11 +281,6 @@ const doctorTeam = team.filter(member => member.type === 'doctor');
 
     /* 设置标题样式 */
     .divider-title {
-      /* font-size: 24px;
-      color: black;
-      margin-bottom: 10px;  */
-
-
       font-size: 24px;  /* "联系我们" 字体大小 */
     margin: 0;  /* 去除默认 margin */
 	color: rgba(0, 99, 155, 1);
@@ -301,69 +297,6 @@ const doctorTeam = team.filter(member => member.type === 'doctor');
 
 
 
-/* .post-wrapper {
-    display: flex;
-    justify-content: center; 
-
-    padding: 20px 0;
-  }	 */
-
-/* .card-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    max-width: 2200px; 
-    flex-wrap: wrap;   
-	gap:20px;
-  } */
-  /* .card {
-  flex: 1 1 200px;   
-  margin: 10px;
-  height: 200px; 
-  border: 1px solid rgba(0, 99, 155, 0.2); 
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 99, 155, 0.2); 
-  transition: all 0.3s ease;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;  
-}
-
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 99, 155, 0.2);
-}
-
-.card-content {
-  text-align: center;
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-.card-title {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.card-description {
-  font-size: 14px;
-  color: #777;
-}
-
-.map {
-	margin-top:20px;
-	border: 1px solid rgba(0, 99, 155, 0.2); 
-} */
 .cards-container {
       display: flex;
       flex-wrap: wrap;
@@ -379,47 +312,5 @@ const doctorTeam = team.filter(member => member.type === 'doctor');
       }
     }
 </style>
-
-
-<!-- <script type="text/javascript">
-	var map; // 定义地图对象
-	var point; // 定义定位点
-	var marker; // 定义标记
-
-	function initialize() {
-		// 创建地图实例
-		map = new BMap.Map('map');
-		
-		// 指定经纬度坐标
-		point = new BMap.Point(123.553727, 41.748608); 
-
-		// 设置地图的中心点和缩放级别（缩放级别增大以查看详细信息）
-		map.centerAndZoom(point, 17); // 定位到该点，缩放级别为17（更近，显示详细信息）
-
-		// 启用滚轮缩放功能
-		// map.enableScrollWheelZoom(false); // 启用地图的滚轮缩放功能
-
-		// 创建自定义蓝色填充标记
-		var redIcon = new BMap.Icon('/assets/location/location.png', new BMap.Size(40, 40)); // 自定义图标
-		marker = new BMap.Marker(point, {icon: redIcon}); // 使用自定义图标创建标记
-		map.addOverlay(marker); // 将标记添加到地图
-
-
-		// 添加缩放控件
-		map.addControl(new BMap.NavigationControl()); // 缩放控件（包括放大缩小按钮）
-
-		// 添加比例尺控件
-		map.addControl(new BMap.ScaleControl()); // 比例尺控件
-	}
-
-	// 加载百度地图API
-	function loadScript() {
-		var script = document.createElement("script");
-		script.src = "https://api.map.baidu.com/api?v=2.0&ak=ZbICriNT4c5zrjP3IzvKq2IJ4g4uYuNZ&callback=initialize"; 
-		document.body.appendChild(script);
-	}
-
-	window.onload = loadScript; // 页面加载时执行
-</script> -->
 
 

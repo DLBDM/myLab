@@ -96,12 +96,7 @@ import myPortrait from "../assets/portrait.jpg";
 	color: rgba(0, 0, 0, 0.3);
   }
 
-.post-wrapper {
-    display: flex;
-    justify-content: center; /* 水平居中 */
 
-    padding: 20px 0;
-  }	
 
 .card-container {
     display: flex;
@@ -160,7 +155,7 @@ import myPortrait from "../assets/portrait.jpg";
 .map {
 	margin-top:20px;
 	border: 1px solid rgba(0, 99, 155, 0.2); /* 边框设置为透明度较低 */
-      width: 100%;
+      width: 98%;
       height: 70vh; /* 高度为视口高度的50% */
       /* 你可以根据需要调整高度比例 */
     }
@@ -168,12 +163,14 @@ import myPortrait from "../assets/portrait.jpg";
     /* 可选：在不同屏幕尺寸下调整高度 */
     @media (max-width: 768px) {
       .map {
+		width: 95%;
         height: 50vh;
       }
     }
 
     @media (max-width: 480px) {
       .map {
+		width: 95%;
         height: 50vh;
       }
     }
