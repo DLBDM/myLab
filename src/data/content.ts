@@ -17,7 +17,7 @@ export const nav: Nav = {
 	labName: '计算机科学实验室',
     items: [
         { label: '首页', href: '/', target: '_self' },
-        { label: '团队', href: '/project', target: '_self' },
+        { label: '团队', href: '/team', target: '_self' },
         { label: '风采', href: '/blog', target: '_self' },
 		{ label: '联系', href: '/about', target: '_self' },
     ],
@@ -154,7 +154,7 @@ export interface FilterItem {
 export const filterItems: FilterItem[] = [
 	{ content: "学术交流", dataGroup: "Conference" },
 	{ content: "研究方向", dataGroup: "Focus" },
-	{ content: "工业产物", dataGroup: "Product" },
+	{ content: "成果转化", dataGroup: "Product" },
 	{ content: "专利技术", dataGroup: "Patent" },
 	{ content: "荣誉奖励", dataGroup: "Award" },
 ];
