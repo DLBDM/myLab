@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';				//导入BaseLayout布局组件
 import Cards from "../components/Cards.astro";						//导入Cards组件
+import BlogPostLayout from "../layouts/BlogPostLayout.astro";
 import SectionHeader from "../components/SectionHeader.astro";		//导入SectionHeader组件
 import {pageTag, pageDescription,homeTdk} from '../data/content';	//导入三变量
 // homeTDK:主页的TDK（标题，描述，关键词）
@@ -17,13 +18,13 @@ const images = [
 ---
 
 <!-- 导航栏和页面底部 -->
-<BaseLayout
+<BlogPostLayout
 title={homeTdk.title  || ''}
 description ={homeTdk.description  || ''}
 keywords = {homeTdk.keywords  || ''}
 >
-	<div class="section hero">
-		<div class="container">
+<div class="post">
+		<main class="post-wrapper about">
 			<div class="contact-container">
 				<h2 class="contact-title">团队概况</h2>
 				<hr class="contact-line">
@@ -49,15 +50,19 @@ keywords = {homeTdk.keywords  || ''}
 					  
 			</SectionHeader>
 			<Cards />
-		</div>
+		</main>
 	</div>
 
-</BaseLayout>
+</BlogPostLayout>
 
 
   <style>
 
+.post-wrapper {
+    flex-direction: column;  /* 纵向排列子元素 */
+    align-items: center;     /* 如果需要将内容水平居中 */
 
+  }
 
 .contact-container {
     display: flex;
@@ -68,6 +73,7 @@ keywords = {homeTdk.keywords  || ''}
     text-align: center;  /* 文字居中对齐 */
 	margin-top:0px;
 	padding-bottom: 0px;
+  /* margin-bottom: ; */
   }
 
   .contact-title {
