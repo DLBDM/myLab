@@ -14,4 +14,11 @@ const blogCollection =  defineCollection({
 
 export const collections = {
 	'blog': blogCollection,
+	'team': blogCollection,
+	'research': blogCollection,
+	'conference': blogCollection,
+	'focus': blogCollection,
+	'patent': blogCollection,
+	'award': blogCollection,
+	'our': blogCollection,
 };

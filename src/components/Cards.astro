@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     white-space: nowrap;
 }
 .tag-original{
-  display: block;
+  display: inline-block;  /* 使标签横向排列 */
   height: 22px;
   padding: 0 8px;
   line-height: 22px;
@@ -256,6 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
   margin-right:6px;
 }
 .card{
+  &-detail {
+        width: 100%;                  /* 或根据实际需求设置宽度 */
+        max-width: 300px;             /* 限制最大宽度，具体值根据设计需求调整 */
+    }
     &-list{
         display: flex;
         flex-wrap: wrap;
@@ -326,8 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        display: flex;
         align-items: center;
+        display: block;
+        flex-grow: 1;  /* 使标题占据剩余空间 */
     }
     &-info{
         display: block;
